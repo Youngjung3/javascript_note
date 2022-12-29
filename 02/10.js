@@ -31,7 +31,7 @@ switch (day) {
 //     case Number(odd) : document.write("홀");
 //     case Number(even) : document.write("짝");
 //     default : document.write("숫자가 아닙니다");
-// }
+// } XX
 
 // const input=Number(prompt("숫자를 입력하세요", "숫자"))
 // // 나머지가 0 false 나머지가 1 true
