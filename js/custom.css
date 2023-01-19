@@ -1,0 +1,15 @@
+:root{
+    --color1:white;
+    --color2:blue;
+    --px10:10px;
+    --color3:#ff0000;
+    --color4:rgba(0,0,0,.4);
+}
+header{position: fixed; left: 0; right: 0; top: 0; background-color: rgba(0, 0, 0, .6); z-index: 100;}
+header nav ul{display: flex; justify-content: center;}
+header nav ul li{margin: 0 calc(var(--px10)*2); list-style: none;}
+header nav ul li a{ color: var(--color1);}
+#pin .active a{color: var(--color3);}
+#fullpage .slide{text-align: center;}
+#fp-nav ul li a{background-color: var(--color1);}
+#fp-nav ul li:active a{background-color: var(--color2);}
