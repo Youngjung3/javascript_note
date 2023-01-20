@@ -11,9 +11,8 @@ addEventListener("DOMContentLoaded", () => {
     request.responseType="document"
 
     request.onload=()=>{
-        let response = request.response;
-        let ids=response.querySelectorAll("[id]");
-        let outer='';
+        let doc=request.responseXML;
+        let ids=doc.querySelectorAll("[id]");
         book1.innerHTML=ids[0].innerText;
         book2.innerHTML=ids[1].innerText;
     }
