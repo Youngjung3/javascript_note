@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 탭: 클릭한것만 보이기(나머지 감추기) -->
+</head>
+
+<body>
+  <ul>
+    <li class="b1">btn1</li>
+    <li class="b2">btn2</li>
+    <li class="b3">btn3</li>
+  </ul>
+  <div>
+    <h3 class="h1">para1</h3>
+    <h3 class="h2">para2</h3>
+    <h3 class="h3">para3</h3>
+    <script>
+      const btn = document.querySelectorAll('ul>li'), panel = document.querySelectorAll('h3');
+
+      panel.forEach((el, i) => {
+        el.style.display = "none";
+        panel[0].style.display = "block";
+      });
+
+
+      btn.forEach(function (el, i) {
+        el.addEventListener("click", function () {
+          hidden(panel);
+          console.log(el,i);
+          visible(panel[i]);
+        })
+      })
+
+      function visible(obj) {
+        obj.style.display = "block";
+      }
+
+      function hidden(obj) {
+        obj.forEach((el, i) => {
+        el.style.display = "none";
+      });
+      }
+
+
+    </script>
+</body>
+
+</html>
