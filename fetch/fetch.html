@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<body>
+    <script>
+        let fetched=fetch('https://jsonplaceholder.typicode.com/photos');
+        fetched.then((response)=>{
+            let data=response.json();
+            data.then((d)=>{
+                console.log("data",d);
+            })
+        });
+
+        fetched.catch((reason)=>{
+            console.log("실패",reason);
+        })
+
+        /* fetch 네크워크통신 할때 씀
+            결과를 promise 객체로 반환
+            성공시 then
+            실패시 catch
+            es6
+        */
+
+        /* 
+            async
+            await
+            es8
+        */
+    </script>
+</body>
+</html>
