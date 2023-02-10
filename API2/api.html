@@ -5,24 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
-
+    <div id="container"></div>
 
 
     <!-- https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=selMHZVUuZStmVQq9fGNK9oUN%2F%2B6HlnOTSorSUNn%2BVS3NpidZ4VMlp5ee%2BPjg88zxbjlg6ixLbtPQxPwz98lbw%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=20230209&base_time=0600&nx=61&ny=125 -->
-<!--     <script>
-        // 오늘날짜생성
-        let date=new Date();
-        // YYYYMMDD
-        let year=String(date.getFullYear());
-        let month=String(date.getMonth()+1.).padStart(2,"0");
-        let day=String(date.getDate()).padStart(2,"0");
-        let now=year+month+day;
-        console.log(now);
 
-    </script> -->
     <!-- <script src="xhr.js"></script> -->
+    <script src="date.js"></script>
     <script src="fetch.js"></script>
 </body>
 </html>
