@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="mySelect">
+        <option value="떡볶이">떡볶이</option>
+        <option value="순대">순대</option>
+        <option value="김밥" selected>김밥</option>
+    </select>
+    <p class="log"></p>
+    <script>
+        const el=document.querySelector("#mySelect");
+        let val=el.value;
+        const log=document.querySelector(".log");
+        log.innerHTML=`선택된 과일은 ${val} 입니다`;
+        el.addEventListener('change',fn);
+        function fn(e) {
+            val=e.target.value;
+            log.innerHTML=`선택된 과일은 ${val} 입니다`;
+        }
+    </script>
+</body>
+</html>
