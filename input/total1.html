@@ -59,27 +59,34 @@
         { value: 4825, name: "김해" },
         { value: 4831, name: "거제" },
       ];
-    
-      //select
-      const el=document.querySelector("#pref");
-      //option
-      let optStr='<option value="선택하세요">선택하세요</option>'
-      PREF_LIST.forEach((e)=>{
-        optStr+=`<option value="${e.name} ${e.value}">${e.name}</option>`
-        // console.log(e.name);
-    })
-    el.innerHTML=optStr;
-    // console.log(el);
-    // 변경시 이벤트
-    const log=document.querySelector(".log");
-    el.addEventListener("change",function(e){
-      const val=e.target.value;
-      console.log(e);
-      const na=e.target.name;
-      log.innerHTML=`선택하신 지역은 ${val} 입니다`;
-      // console.log(e.target.name);
-    })
+      const el = document.querySelector("#pref");
+      let log = document.querySelector(".log");
+      /* 동적요소생성
+            1. 빈 변수 생성 (초기값)
+            2. 1번에서 생성한 변수에 배열(반복문)의 원소를 추가할당 a+=b
+            3. 상위요소를 선택하여 2번을 추가
+      */
+      let optStr='<option value="선택하세요">선택하세요</option>';
+      PREF_LIST.forEach((item)=>{
+        // console.log(item);
+        optStr+=`<option value=${item.value}>${item.name}</option>`;
+      })
+      el.innerHTML=optStr;
 
+
+      //옵션 변경시 이벤트
+      el.addEventListener("change",function(e){
+        const val=e.target.value;
+        let filtered= PREF_LIST.filter((ci,idx)=>{
+        // console.log(ci,idx);
+        if(ci.value==val){
+          return true;
+        }
+      })
+      console.log(filtered);
+
+        log.innerHTML=`선택하신 지역은 ${filtered[0].name}이고 코드는 ${val} 입니다.`;
+      })
     </script>
   </body>
 </html>
