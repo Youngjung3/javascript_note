@@ -89,3 +89,8 @@ section{
 .sectionIn{
   background:red;
 }
+
+/* sideNav */
+.sideNav{position: fixed; top: 10%; right: 10%; transition: top 1s; z-index: 999; list-style: none;}
+.sideNav a{display: inline-block; padding: 1em; background-color: rgba(0, 0, 0, 0.5); color: #fff; margin-bottom: 1em; text-decoration: none;}
+.sideNav li.on a::before{content:"🐭";}
