@@ -26,7 +26,7 @@ sideNav.click(function (e) {
 //스크롤이 됐을 때
 $(window).scroll(function () {
 	var scrollTop = $(window).scrollTop(); //scrollTop() : 브라우저의 위치 값
-	scrollTop > 100 ? nav.addClass("sticky") : nav.removeClass("sticky");
+	scrollTop > 10000 ? nav.addClass("sticky") : nav.removeClass("sticky");
 	sections.each(function (index) {
 		if (scrollTop >= sections.eq(index).offset().top - gap) {
 			sideNav.eq(index).addClass("on").siblings().removeClass("on");
