@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+        /* import 를 사용해 say.js의 함수 say를 사용 */
+        import { say } from './say.js';
+        document.body.innerHTML = say('망고');
+      </script>
+    <script type="module">
+        import app from "./say.js"
+        app('망고2');
+    </script>
+  </body>
+</html>
